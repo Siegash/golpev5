@@ -1,0 +1,6 @@
+{
+  "name": "Isso é golpe? — Registro e Análise",
+  "description": "Plataforma de prevenção digital com cadastro local de ocorrências de golpes e analisador de mensagens suspeitas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --bg: #f0f5f8;
+  --surface: #ffffff;
+  --surface-2: #e8f0f5;
+  --ink: #152533;
+  --soft: #4e6273;
+  --line: #cbd8e1;
+  --link: #075e85;
+  --accent: #087d63;
+  --accent-hover: #066a54;
+  --accent-ink: #ffffff;
+  --mark-bg: #fff09a;
+  --mark-ink: #17220b;
+  --danger: #b4233d;
+  --warning: #9a5b00;
+  --good: #087d63;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: #080d18;
+  --surface: #101827;
+  --surface-2: #151f31;
+  --ink: #e8f0fc;
+  --soft: #a3b1c7;
+  --line: #29374c;
+  --link: #59e6ff;
+  --accent: #00e5a0;
+  --accent-hover: #00c98c;
+  --accent-ink: #03150f;
+  --mark-bg: #d6ff69;
+  --mark-ink: #17220b;
+  --danger: #ff647c;
+  --warning: #ffbf69;
+  --good: #6ce7b0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+h1, h2 {
+  text-wrap: balance;
+}
+
+mark {
+  background-color: var(--mark-bg);
+  color: var(--mark-ink);
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
